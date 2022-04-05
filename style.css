@@ -1,0 +1,432 @@
+:root {
+  --primary: hsl(231, 69%, 60%);
+  --secundary: hsl(0, 94%, 66%);
+  --terciario: hsl(229, 8%, 60%);
+  --cuaternario: hsl(229, 31%, 21%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+body {
+  text-align: center;
+  background-image: url(./imagenes/Background-blue.png);
+  background-repeat: no-repeat;
+  background-size: 70% 189px;
+  background-position: 100% 142px;
+}
+header {
+  height: 100px;
+  width: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 10px; */
+  position: fixed;
+  background-color: white;
+  z-index: 9;
+  /* padding: 0px 10%; */
+}
+.nav {
+  display: none;
+}
+#menu {
+  display: none;
+}
+p {
+  color: var(--terciario);
+}
+.header > img {
+  cursor: pointer;
+}
+.header > label > img {
+  cursor: pointer;
+}
+.menu-container {
+  z-index: 9;
+  background-color: var(--cuaternario);
+  opacity: .9;
+  transform: translate(0px, -100vh);
+  opacity: .5;
+  transition: 1s;
+}
+.menu-container > div {
+  width: 100%;
+}
+#menu:checked ~ .menu-container {
+  position: fixed;
+  background-color: var(--cuaternario);
+  opacity: .9;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: .94;
+  transform: translate(0px, 0%);
+}
+.menu-header {
+  height: 100px;
+  width: 100%;
+  background-color: transparent;
+}
+.menu-main {
+  padding: 100px 13%;
+}
+.menu-main > div > button {
+  background-color: transparent;
+  color: white;
+  border: none;
+  width: 100%;
+  text-align: center;
+  border-top: .5px solid var(--terciario);
+  border-bottom: .1px solid var(--terciario);
+  padding: 20px 0;
+}
+.menu-main > div {
+  padding: 30px 0;
+}
+.menu-main > button {
+  width: 100%;
+  padding: 20px;
+  background-color: transparent;
+  border: solid 3px white;
+}
+.menu-main > button > a {
+  text-decoration: none;
+  color: white;
+}
+
+/* MAIN */
+.simple-bookmark-manager {
+  padding-top: 120px;
+}
+.simple-bookmark-manager img {
+  max-height: 200px;
+}
+.simple-bookmark-content {
+  padding: 100px 10%;
+}
+.container-btn-navegadores {
+  display: flex;
+  padding: 10px 0;
+}
+.btn-get-chrom {
+  box-shadow: 2px 2px 5px var(--terciario);
+  background-color: var(--primary);
+  margin-right: 10px;
+}
+.btn-get-firefox {
+  box-shadow: 2px 2px 5px var(--terciario);
+}
+
+.container-buttons-feature {
+  display: flex;
+  flex-direction: column;
+  margin: 40px 0;
+}
+.button-feature {
+  margin: 0 auto;
+  width: 100%;
+  border: none;
+  border-top: 1px solid var(--terciario);
+  border-bottom: 1px solid var(--terciario);
+  padding: 20px 0;
+  background: white;
+  position: relative;
+  cursor: pointer;
+}
+.button-feature::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 5px;
+  left: 25%;  
+  bottom: 0%;
+  background-color: brown;
+  border-radius: 10px;
+  transform: scale(0, 1);
+  transition: 1s ease;
+  /* display: inline-block; */
+}
+.button-feature:hover::after {
+  transform: scale(1, 1);
+  transition: 1s;
+}
+.in-on-click {
+  margin: 100px 0;
+}
+.option-features > div {
+  padding: 0 10%;
+}
+.option-features button {
+  background-color: var(--primary);
+}
+.section-features img {
+  max-height: 200px;
+  /* width: 100%; */
+  margin: 50px 0;
+}
+
+.dowunload-extension {
+  margin: 100px 0;
+  padding: 0 10%;
+}
+.dowunload-extension > div {
+  margin: 50px auto;
+}
+.card {
+  border: 0px solid;
+  box-shadow: 10px 10px 30px gainsboro;
+  margin: 20px 0;
+}
+.card-body > img, h5 {
+  margin: 20px 0;
+}
+.card-body > p {
+  padding-bottom: 30px;
+}
+.card-body > div {
+  padding-top: 10px;
+}
+.buttons-cards {
+  background-color: var(--primary);
+  border: none
+}
+.frequently-asked {
+  margin: 200px 0;
+  padding: 0 10%;
+}
+.questions {
+  text-align: start;
+}
+.res {
+  display: block;
+  transition: 1s;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+} 
+#animation-question-1,
+#animation-question-2,
+#animation-question-3,
+#animation-question-4 {
+  display: none;
+  width: 100%;
+}
+.item-question {
+  border-bottom: .5px solid var(--terciario);
+  padding: 20px 0;
+}
+.item-question > .label-question {
+  width: 100%;
+  min-height: 100px;
+}
+.label-question > div {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  flex: 1;
+}
+.label-question > div > img {
+  transform: rotate(-180deg);
+  transition: 1s;
+  flex: 1;
+  max-height: 15px;
+  max-width: 20px;
+  min-height: 15px;
+  min-width: 20px;
+}
+#animation-question-1:checked + .label-question > .res {
+  display: block;
+  height: auto;
+  opacity: 1;
+}
+#animation-question-2:checked + .label-question > .res {
+  display: block;
+  height: auto;
+  opacity: 1;
+}
+#animation-question-3:checked + .label-question > .res {
+  display: block;
+  height: auto;
+  opacity: 1;
+}
+#animation-question-4:checked + .label-question > .res {
+  display: block;
+  height: auto;
+  opacity: 1;
+}
+
+
+#animation-question-1:checked + .label-question > div > img {
+  transform: rotate(0deg);
+  filter: invert(100%) sepia() saturate(10000%) hue-rotate(0deg); 
+}
+#animation-question-2:checked + .label-question > div > img {
+  transform: rotate(0deg);
+  filter: invert(100%) sepia() saturate(10000%) hue-rotate(0deg);
+}
+#animation-question-3:checked + .label-question > div > img {
+  transform: rotate(0deg);
+  filter: invert(100%) sepia() saturate(10000%) hue-rotate(0deg);
+}
+#animation-question-4:checked + .label-question > div > img {
+  transform: rotate(0deg);
+  filter: invert(100%) sepia() saturate(10000%) hue-rotate(0deg);
+}
+/* ELEMENTO NUEVO DE PRUEBA */
+.x {
+  background:hsl(0, 94%, 66%);
+  height: 100px;
+  width: 100px;
+  padding-top: 500px;
+}
+#active-respond-2:checked + .respond-2 {
+  background-color: blue;
+}
+.questions > button {
+  margin: 70px 0;
+}
+footer {
+  color: white;
+}
+.date-email {
+  background-color: var(--primary);
+  padding: 100px 0;
+  padding: 50px 60px;
+}
+.container-input {
+  width: 80%;
+  margin: 40px auto;
+  border-radius: 5px;
+  padding: 2px;
+  /* background-color: var(--secundary); */
+}
+.container-input::after {
+  content: attr(title);
+}
+.container-input > input {
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+}
+.date-email > button {
+  width: 100%;
+}
+.footer-bookmark {
+  background-color: var(--cuaternario);
+  padding: 50px 0;
+}
+.footer-bookmark > h5 {
+  color: var(--terciario);
+}
+/*Escritorio*/
+@media (min-width: 1199.98px)  {
+  body {
+    background-size: 560px 284px;
+    background-position: 100% 204px
+  }
+  .header {
+    width: 100%;
+    justify-content: space-around;
+  }
+  .nav {
+    display: block;
+  }
+  .header > label {
+    display: none;
+
+  }
+  .nav > a {
+    text-decoration: none;
+    margin-right: 40px;
+    color: var(--primary);
+    padding: 5px 20px;
+  }
+  .nav > a:hover {
+    color: var(--secundary);
+  }
+  nav > .btn-login {
+    border: solid 3px var(--secundary);
+    border-radius: 5px;
+    background-color: var(--secundary);
+    color: white;
+  }
+  nav > .btn-login:hover {
+    border-color: var(--secundary);
+    background-color: white;
+    color: var(--secundary);
+  }
+  .menu-container {
+    display: none;
+  }
+  /* main  */
+  .simple-bookmark-manager {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10%;
+  }
+  .simple-bookmark-manager img {
+    max-height: 350px;
+  }
+  .simple-bookmark-manager > div {
+    padding: 0%;
+  }
+  .container-btn-navegadores {
+    justify-content: center;
+  }
+  .features {
+    margin: 0 20%;
+  }
+  .section-features img {
+    max-height: 270px;
+  }
+  .option-features {
+    width: 70%;
+    margin: 0 auto; 
+    display: flex;
+    align-items: center;
+  }
+  .container-buttons-feature {
+    flex-direction: row;
+  }
+  .button-feature {
+    border-top: none;
+  }
+  .option-features > div {
+    padding-right: 10%;
+  }
+
+  .container-cards {
+    display: flex;  
+    /* height: 00px; */
+    justify-content: space-between;
+  }
+  .card:nth-child(2) {
+    top: 100px  
+  }
+  .card:nth-child(3) {
+    top: 200px;
+  }
+  .frequently-asked {
+    width: 60%;
+    margin: 330px auto;
+  }
+  .footer-bookmark {
+    display: flex;
+    justify-content: space-around;
+  }
+  .footer-bookmark > h5:hover {
+    cursor: pointer;
+    color: var(--secundary);
+  }
+  .footer-bookmark a {
+    margin-left: 10px;
+  }
+}
+/*Fin Escritorio*/
