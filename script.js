@@ -8,7 +8,7 @@ containerButtonsFeature.addEventListener("click", (e) => {
   if(idButton == "1") {
     sectionFeatures.innerHTML = `
     <div class="option-features">
-    <img src="./imagenes/illustration-features-tab-1.svg" alt="">
+    <img src="https://res.cloudinary.com/dxhgejzwc/image/upload/v1648863057/Maquetado-reto-1-A.G/illustration-features-tab-1_cg9vl1.svg" alt="">
     <div>
         <h2>Bookmark in one click</h2>
         <p>Organize your bookmarks however you like.</p>
